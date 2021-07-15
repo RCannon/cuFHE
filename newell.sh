@@ -4,14 +4,14 @@
 #SBATCH -J cufhe
 #SBATCH -p newell
 #SBATCH -t 5
-#SBATCH -o deception_out/out.%J.log
-#SBATCH -e deception_out/err.%J.log
+#SBATCH -o newell_out/out.%J.log
+#SBATCH -e newell_out/err.%J.log
 
 source /etc/profile.d/modules.sh
 
 module purge
-module load cuda/10.2.89
-module load gcc/7.3.0
+module load cuda/10.2
+module load gcc/7.4.0
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/people/cann484/cuFHE/cufhe/bin/
 
